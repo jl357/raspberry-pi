@@ -10,5 +10,5 @@ death_ray = gpio.GPIODevice(5)
 ldr.when_dark = lambda: death_ray.on()
 ldr.when_light = lambda: death_ray.off()
 
-# Setting the event functions doesn't yield the script, so we need to pause it so it doesn't immediately exit
+# A pause is here so that way the script doesn't immediately exit; the above code won't do anything if the script exits
 pause()
