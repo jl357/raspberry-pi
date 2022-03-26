@@ -6,6 +6,9 @@ green = gpio.LED("BOARD8")
 yellow = gpio.LED("BOARD10")
 red = gpio.LED("BOARD12")
 
+green.off()
+red.off()
+
 yellow.on()
 
 response = requests.get("http://www.google.com")
@@ -19,3 +22,5 @@ if response.status_code == 400:
     green.on()
 else:
     red.on()
+
+pause()
