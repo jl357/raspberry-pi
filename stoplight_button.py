@@ -10,9 +10,9 @@ min = 8
 max = 12
 
 lights = {
-    ["8"]: gpio.LED("BOARD8"),
-    ["10"]: gpio.LED("BOARD10"),
-    ["12"]: gpio.LED("BOARD12"),
+    ["8"]: tuple(gpio.LED("BOARD8")),
+    ["10"]: tuple(gpio.LED("BOARD10")),
+    ["12"]: tuple(gpio.LED("BOARD12")),
 }
 
 def nextLight():
