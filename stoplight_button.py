@@ -9,9 +9,9 @@ curLightPin = 8
 min = 8
 max = 12
 
-green = gpio.LED(8)
-yellow = gpio.LED(10)
-red = gpio.LED(12)
+green = gpio.LED("BOARD8")
+yellow = gpio.LED("BOARD10")
+red = gpio.LED("BOARD12")
 
 def nextLight():
     global curLightPin
