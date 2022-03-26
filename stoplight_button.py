@@ -18,6 +18,8 @@ lights = [
 def nextLight():
     global curLightPin
 
+    print("pressed!")
+
     for light in lights:
         light.off()
 
