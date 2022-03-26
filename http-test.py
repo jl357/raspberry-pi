@@ -18,7 +18,7 @@ yellow.off()
 print(response)
 print(response.status_code)
 
-if response.status_code == 400:
+if response.status_code == 200:
     green.on()
 else:
     red.on()
