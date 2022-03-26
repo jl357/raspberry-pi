@@ -3,7 +3,7 @@
 import gpiozero as gpio
 from signal import pause
 
-button = gpio.Button(3)
+button = gpio.Button("BOARD3")
 curLightPin = 8
 
 min = 8
