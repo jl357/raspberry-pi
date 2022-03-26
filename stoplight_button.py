@@ -27,7 +27,7 @@ def nextLight():
     gpio.GPIODevice(curLightPin).on()
 
 
-# lambda is basically just a one-line function
+# Tell it to run the nextLight function
 button.when_pressed = nextLight
 
 # A pause is here so that way the script doesn't immediately exit; the above code won't do anything if the script exits
