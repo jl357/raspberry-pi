@@ -28,7 +28,7 @@ def nextLight():
     else:
         curLightPin += 2
     
-    gpio.LED(curLightPin).on()
+    gpio.LED("BOARD" + curLightPin).on()
 
 
 # Tell it to run the nextLight function
