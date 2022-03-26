@@ -10,9 +10,9 @@ min = 8
 max = 12
 
 lights = [
-    gpio.GPIODevice("BOARD8"),
-    gpio.GPIODevice("BOARD10"),
-    gpio.GPIODevice("BOARD12"),
+    gpio.LED("BOARD8"),
+    gpio.LED("BOARD10"),
+    gpio.LED("BOARD12"),
 ]
 
 def nextLight():
@@ -28,7 +28,7 @@ def nextLight():
     else:
         curLightPin += 2
     
-    gpio.GPIODevice(curLightPin).on()
+    gpio.LED(curLightPin).on()
 
 
 # Tell it to run the nextLight function
