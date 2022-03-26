@@ -10,12 +10,14 @@ min = 8
 max = 12
 
 lights = [
-    gpio.GPIODevice(8),
-    gpio.GPIODevice(10),
-    gpio.GPIODevice(12),
+    gpio.GPIODevice("BOARD8"),
+    gpio.GPIODevice("BOARD10"),
+    gpio.GPIODevice("BOARD12"),
 ]
 
 def nextLight():
+    global curLightPin
+
     for light in lights:
         light.off()
 
