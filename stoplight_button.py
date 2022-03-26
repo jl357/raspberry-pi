@@ -9,26 +9,21 @@ curLightPin = 8
 min = 8
 max = 12
 
-lights = [
-    gpio.LED("BOARD8"),
-    gpio.LED("BOARD10"),
-    gpio.LED("BOARD12"),
-]
+lights = {
+    ["8"]: gpio.LED("BOARD8"),
+    ["10"]: gpio.LED("BOARD10"),
+    ["12"]: gpio.LED("BOARD12"),
+}
 
 def nextLight():
     global curLightPin
-
-    print("pressed!")
-
-    for light in lights:
-        light.off()
 
     if curLightPin + 2 > max:
         curLightPin = min
     else:
         curLightPin += 2
     
-    gpio.LED("BOARD" + str(curLightPin)).on()
+    lights[str(curLightPin)].on()
 
 
 # Tell it to run the nextLight function
