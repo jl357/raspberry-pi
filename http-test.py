@@ -1,4 +1,4 @@
-from gpiozero import led
+from gpiozero import LED as led
 from signal import pause
 import requests
 
