@@ -1,6 +1,6 @@
 from signal import pause
 import requests
-import gpizero
+import gpiozero
 
 green = gpio.LED("BOARD8")
 yellow = gpio.LED("BOARD10")
